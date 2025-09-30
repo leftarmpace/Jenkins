@@ -1,7 +1,7 @@
  pipeline { 
     agent any 
     environment { 
-        MOVIE_NAME = 'CloudFolks Production' 
+        MOVIE_NAME = 'CloudFolks Production 2nd part' 
     } 
     stages { 
         stage('Build') { 
