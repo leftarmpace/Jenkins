@@ -1,20 +1,21 @@
-pipeline{
-    agent any
-    stages{
-        stage('Build'){
-            steps{
-                echo "Hello for first Jenkinsfile"
-            }
-
-        }
-    }
-    post{
-        success{
-            echo "Pipeline is successfull"
-
-        }
-        failure{
-            echo "Not done yet"
+ pipeline { 
+    agent any 
+    environment { 
+        MOVIE_NAME = 'CloudFolks Production' 
+    } 
+    stages { 
+        stage('Build') { 
+            steps { 
+                echo "Shooting the scene for ${MOVIE_NAME}..." 
+            } 
+        } 
+    } 
+    post { 
+        success { 
+            echo 'Movie completed successfully!' 
+        } 
+        failure { 
+            echo 'Reshoot required — something failed!'
         }
     }
 }
